@@ -36,6 +36,19 @@ terraform init
 terraform apply -var-file=technical-assignment.terraform.tfvars
 ```
 
+## Check
+```
+terraform output
+```
+
+Copy Load Balancer DNS name and pass it to the check script
+```
+./check.sh <DNS_NAME>
+
+#example
+./check.sh ./check.sh develop-alb-xxxxxxxxx.eu-central-1.elb.amazonaws.com
+```
+
 ## Cleanup
 ```
 terraform destroy -var-file=technical-assignment.terraform.tfvars
