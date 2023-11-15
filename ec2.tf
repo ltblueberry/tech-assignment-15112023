@@ -25,7 +25,7 @@ module "ec2_instance" {
               unzip v1.0.0.zip
               python3 -m ensurepip --upgrade
               pip3 install -r requirements.txt
-              python3 application.py
+              nohup python3 application.py > log.txt 2>&1 &
               EOF
   
   tags = {
