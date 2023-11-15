@@ -22,3 +22,21 @@ aws_secret_access_key = XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 region = eu-central-1
 output = json
 ```
+
+## Application
+The application from this git repository [ltblueberry/tech-assignment-demo-app](https://github.com/ltblueberry/tech-assignment-demo-app) will be used as a demo application for this technical assignment.
+
+## Initialization
+```
+terraform init
+```
+
+## Deployment
+```
+terraform apply -var-file=technical-assignment.terraform.tfvars
+```
+
+## Cleanup
+```
+terraform destroy -var-file=technical-assignment.terraform.tfvars
+```
