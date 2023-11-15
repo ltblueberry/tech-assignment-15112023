@@ -18,6 +18,15 @@ module "ec2_instance" {
       volume_size = 10
     },
   ]
+
+  user_data = <<-EOF
+              #!/bin/bash
+              wget https://github.com/ltblueberry/tech-assignment-demo-app/releases/download/v1.0.0/v1.0.0.zip
+              unzip v1.0.0.zip
+              python3 -m ensurepip --upgrade
+              pip3 install -r requirements.txt
+              python3 application.py
+              EOF
   
   tags = {
     Terraform   = "true"
