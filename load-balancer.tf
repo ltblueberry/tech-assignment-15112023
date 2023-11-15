@@ -41,12 +41,14 @@ module "alb" {
 
   target_groups = {
     instance = {
-      name_prefix      = "app-"
-      protocol         = "HTTP"
-      protocol_version = "HTTP1"
-      port             = 5000
-      target_type      = "instance"
-      target_id        = module.ec2_instance.id
+      name_prefix       = "app-"
+      protocol          = "HTTP"
+      protocol_version  = "HTTP1"
+      port              = 5000
+      target_type       = "instance"
+
+      create_attachment = false
+      # target_id        = module.ec2_instance.id
     }
   }
 
