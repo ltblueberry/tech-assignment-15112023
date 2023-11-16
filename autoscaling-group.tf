@@ -38,6 +38,18 @@ module "autoscaling" {
     }
   ]
 
+  scaling_policies = {
+    policyCPU60 = {
+      policy_type               = "TargetTrackingScaling"
+      target_tracking_configuration = {
+        predefined_metric_specification = {
+          predefined_metric_type = "ASGAverageCPUUtilization"
+        }
+        target_value = 60.0
+      }
+    }
+  }
+
   tags = {
     Terraform   = "true"
     Environment = "develop"
