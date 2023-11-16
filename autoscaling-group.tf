@@ -42,4 +42,6 @@ module "autoscaling" {
     Terraform   = "true"
     Environment = "develop"
   }
+
+  depends_on = [module.vpc]
 }
