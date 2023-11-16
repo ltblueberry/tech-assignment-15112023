@@ -143,7 +143,7 @@ terraform destroy -var-file=technical-assignment.terraform.tfvars
 ```
 
 ## Example
-Please find this walkthrough [example](./) related to this technical assignment in case you have questions or troubles.
+Please find this walkthrough [example](https://github.com/ltblueberry/tech-assignment-15112023/tree/main/example) related to this technical assignment in case you have questions or troubles.
 
 <br>
 
