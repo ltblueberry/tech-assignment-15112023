@@ -48,7 +48,6 @@ module "alb" {
       target_type       = "instance"
 
       create_attachment = false
-      # target_id        = module.ec2_instance.id
     }
   }
 

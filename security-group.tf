@@ -15,21 +15,7 @@ module "sg" {
       protocol    = "tcp"
       description = "Application"
       cidr_blocks = "10.42.0.0/16"
-    },
-    { # FOR DEBUG
-      from_port   = 22
-      to_port     = 22
-      protocol    = "tcp"
-      description = "SSH"
-      cidr_blocks = "0.0.0.0/0"
-    },
-    { # FOR DEBUG
-      from_port   = 5000
-      to_port     = 5000
-      protocol    = "tcp"
-      description = "all for app"
-      cidr_blocks = "0.0.0.0/0"
-    },
+    }
   ]
   egress_with_cidr_blocks = [
     {
